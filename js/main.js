@@ -540,7 +540,9 @@ $('#counter-event').countdown($('#counter-event').attr("data-enddate")).on('upda
 
 jQuery(function ($) {
     // start all the timers
+    document.getElementById("reg").disabled = true;
     animatecounters();
+    
 });
 
 function animatecounters() {
@@ -550,6 +552,7 @@ function animatecounters() {
         options = $.extend({}, options || {}, $this.data('countToOptions') || {});
         $this.countTo(options);
     }
+    
 
 }
 
